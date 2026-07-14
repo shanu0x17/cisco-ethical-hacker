@@ -46,7 +46,15 @@ Images and diagrams used throughout the documentation.
 
 ## Scripts
 
+
+
+
+
 ## Cheat Sheets
+
+
+
+
 
 ## Skills Gained
 
@@ -81,6 +89,4 @@ This repository is intended solely for educational purposes.
 All practical exercises were performed in authorized lab environments. No techniques or tools documented here should be used against systems without explicit permission.
 
 ---
-## Disclaimer
 
-## License
