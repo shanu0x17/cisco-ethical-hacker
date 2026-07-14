@@ -33,9 +33,6 @@ Hands-on exercises and walkthroughs.
 scripts/
 Automation written in Python and Bash.
 
-cheatsheets/
-Quick references for commonly used tools and commands.
-
 assets/
 Images and diagrams used throughout the documentation.
 
