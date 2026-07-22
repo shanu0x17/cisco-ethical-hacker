@@ -71,6 +71,18 @@ nmap -sV --script=http-enum <target>
   - Scapy is one of pentesters' favorite tools and frameworks. Scapy is a very comprehensive Python-based framework or ecosystem for packet generation
 
 - As a penetration tester, you can use tools like Wireshark, tshark, and tcpdump to collect packet captures for packet inspection and eavesdropping
+### Vulnerability scanning:
+- The primary method is to identify the version of the software that is running on the open service and try to match it with an already known vulnerability
+- Keep in mind that these results are often false positives and need to be validated
+### Types of Vulnerability Scans
+- An unauthenticated scan shows only the network services that are exposed to the network. The scanner attempts to enumerate the ports open on the target host, do not use credentials to scan a target
+- An authenticated scan requires you to provide the scanner with a set of credentials that have root-level access to the system
+- A discovery scan is primarily meant to identify the attack surface of a target. A port scan is a major part of what a discovery scan performs
+- A full scan typically involves enabling every scanning option in the scan policy. The options vary based on the scanner, but most vulnerability scanners have their categories of options defined similarly
+- There are sometimes situations in which you must scan an environment that is in a production state. In such situations, there is typically a requirement for running a scan without alerting the defensive position of the environment; such a scan is called a stealth scan. Vulnerability scanners are pretty noisy; however, there are some options you can configure to make a scan quieter
+- A passive vulnerability scanner monitors and analyzes the network traffic. Based on the traffic it sees, it can determine what the topology of the network consists of and what service the hosts on the network are listening on
+- Compliance scans are network and application tests (scans) typically driven by the market or governance that the environment serves and regulatory compliance
+
 ---
 
 
@@ -92,6 +104,7 @@ nmap -sV --script=http-enum <target>
 - enum4linux, smbclient
 - nikto
 - Scapy- packet crafter
+- GVM- vul scanner
 ---
 
 ## References
