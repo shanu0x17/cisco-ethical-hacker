@@ -83,6 +83,12 @@ nmap -sV --script=http-enum <target>
 - A passive vulnerability scanner monitors and analyzes the network traffic. Based on the traffic it sees, it can determine what the topology of the network consists of and what service the hosts on the network are listening on
 - Compliance scans are network and application tests (scans) typically driven by the market or governance that the environment serves and regulatory compliance
 
+- One of the most widely adopted standards for calculating the severity of a given vulnerability is the Common Vulnerability Scoring System (CVSS)
+- CVSS is an industry standard maintained by the Forum of Incident Response and Security Teams (FIRST) that is used by many Product Security Incident Response Teams (PSIRTs) to convey information about the severity of vulnerabilities they disclose to their customers
+- The base group represents the intrinsic characteristics of a vulnerability that are constant over time and do not depend on a user-specific environment
+- The temporal group assesses the vulnerability as it changes over time
+- The environmental group represents the characteristics of a vulnerability, taking into account the organizational environment
+
 ---
 
 
@@ -125,3 +131,6 @@ PwnDB: https://github.com/davidtavarez/pwndb
 - https://nmap.org/book/man-port-specification.html
 - https://nmap.org/book/man-nse.html
 - https://github.com/cddmp/enum4linux-ng
+- https://cve.mitre.org/
+- https://cwe.mitre.org/
+- https://www.first.org/cvss/
