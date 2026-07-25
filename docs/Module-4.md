@@ -28,7 +28,13 @@ Explain how social engineering attacks succeed.
 - Universal Serial Bus (USB) drop key attacks to successfully compromise victim systems. This type of attack involves just leaving USB sticks (sometimes referred to as USB keys or USB pen drives) unattended or placing them in strategic locations
 - A watering hole attack is a targeted attack that occurs when an attacker profiles websites that the intended victim accesses. The attacker then scans those websites for possible vulnerabilities
 - Watering hole attacks are often designed to profile users of specific organizations. Organizations should therefore develop policies to prevent these attacks
--  
+
+### Physical Attacks
+- With piggybacking, an unauthorized person tags along with an authorized person to gain entry to a restricted area – usually with the person’s consent. Tailgating is essentially the same but with one difference: It usually occurs without the authorized person’s consent
+- With Dumpster diving, a person scavenges for private information in garbage and recycling containers
+- With shoulder surfing, someone obtains information such as personally identifiable information (PII), passwords, and other confidential data by looking over a victim’s shoulder
+- Attackers can perform different badge cloning attacks. For example, an attacker can clone a badge/card used to access a building
+
 
 ---
 
