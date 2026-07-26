@@ -35,15 +35,26 @@ Explain how social engineering attacks succeed.
 - With shoulder surfing, someone obtains information such as personally identifiable information (PII), passwords, and other confidential data by looking over a victim’s shoulder
 - Attackers can perform different badge cloning attacks. For example, an attacker can clone a badge/card used to access a building
 
+### Social engineering tools
+- The Social-Engineer Toolkit (SET) is a tool developed by David Kennedy. This tool can be used to launch numerous social engineering attacks and can be integrated with third-party tools and frameworks such as Metasploit
+-  Browser Exploitation Framework (BeEF) is a tool that can be used to manipulate users by leveraging XSS vulnerabilities
+-  call spoofing tools: SpoofApp, Spoofcard, Asterisk
 
+### Methods of influence
+- A social engineer shows confidence and perhaps authority–whether legal, organizational, or social authority.
+- It is possible to use scarcity to create a feeling of urgency in a decision-making context.
+- Social proof is a psychological phenomenon in which an individual is not able to determine the appropriate mode of behavior
+- Individuals can be influenced by things or people they like. Social engineers strive for others to like the way they behave, look, and talk
+- It is possible to manipulate a person with fear to prompt him or her to act promptly
 ---
 
 
 ## Tools Introduced
 
--
+- SEToolkit
+- BeEF
 ---
 
 ## References
 
-- 
+- https://beefproject.com/
