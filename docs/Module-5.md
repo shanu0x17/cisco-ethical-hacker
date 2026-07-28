@@ -134,9 +134,73 @@ Amplification- An amplification attack is a form of reflected DoS attack in whic
 -  In a DHCP starvation attack, an attacker broadcasts a large number of DHCP REQUEST messages with spoofed source MAC addresses
 -  If the DHCP server responds to all these fake DHCP REQUEST messages, available IP addresses in the DHCP server scope are depleted within a few minutes or seconds. After the available number of IP addresses in the DHCP server is depleted, the attacker can then set up a rogue DHCP server and respond to new DHCP requests from network DHCP clients
 -  The attacker can set the IP address of the default gateway and DNS server to itself so that it can intercept the traffic from the network hosts
-  
----
 
+## Wireless Vulnerabilities
+
+### Rogue Access Points
+- One of the most simplistic wireless attacks involves an attacker installing a rogue AP in a network to fool users to connect to that AP. Basically, the attacker can use that rogue AP to create a backdoor and obtain access to the network
+
+### Evil Twin Attacks
+- In an evil twin attack, the attacker creates a rogue access point and configures it exactly the same as the existing corporate network
+- The attacker uses DNS spoofing to redirect the victim to a cloned captive portal or a website. When users are logged on to the evil twin, a hacker can easily inject a spoofed DNS record into the DNS cache, changing the DNS record for all users on the fake network
+- Any user who logs in to the evil twin will be redirected by the spoofed DNS record injected into the cache
+
+### Disassociation (or Deauthentication) Attacks
+- An attacker can cause legitimate wireless clients to deauthenticate from legitimate wireless APs or wireless routers to either perform a DoS condition or to make those clients connect to an evil twin. This type of attack is also known as a disassociation attack
+- The attacker disassociates (tries to disconnect) the user from the authenticating wireless AP and then carries out another attack to obtain the user’s valid credentials
+- A service set identifier (SSID) is the name or identifier associated with an 802.11 wireless local area network (WLAN). SSID names are included in plaintext in many wireless packets and beacons
+- You can use the Airodump-ng tool to sniff wireless networks and obtain their SSIDs, along with the channels they are operating
+
+###  Preferred Network List Attacks
+- Operating systems and wireless supplicants (clients), in many cases, maintain a list of trusted or preferred wireless networks. This is also referred to as the preferred network list (PNL)
+-  PNL includes the wireless network SSID, plaintext passwords, or WEP or WPA passwords
+- It is possible for attackers to listen to these client requests and impersonate the wireless networks in order to make the clients connect to the attackers’ wireless devices and eavesdrop on their conversation or
+manipulate their communication.
+
+### Wireless Signal Jamming and Interference
+- The purpose of jamming wireless signals or causing wireless network interference is to create a full or partial DoS condition in the wireless network
+- In order to jam a Wi-Fi signal or any other type of radio communication, an attacker basically generates random noise on the frequencies that wireless networks use
+- With the appropriate tools and wireless adapters that support packet injection, an attacker can cause legitimate clients to disconnect from wireless infrastructure devices
+
+### War Driving
+- War driving is a method attackers use to find wireless access points wherever they might be. By just driving (or walking) around, an attacker can obtain a significant amount of information over a very short period of time
+- war flying, which involves using a portable computer or other mobile device to search for wireless networks from an aircraft, such as a drone or another unmanned aerial vehicle (UAV)
+
+### Initialization Vector (IV) Attacks and Unsecured Wireless Protocols
+- An attacker can cause some modification on the initialization vector (IV) of a wireless packet that is encrypted during transmission
+- The goal of the attacker is to obtain a lot of information about the plaintext of a single packet and generate another encryption key that can then be used to decrypt other packets using the same IV. WEP is susceptible to many different attacks, including IV attacks.
+- WEP must be avoided, and many wireless network devices no longer support it. WEP keys exist in two sizes: 40-bit (5-byte) and 104-bit (13-byte) keys
+- When WEP uses RC4 to encrypt a packet, it prepends the IV to the secret key before including the key in RC4. Subsequently, an attacker has the first 3 bytes of an allegedly “secret” key used on every packet
+- An attacker can accelerate this type of attack by just injecting ARP packets (because the length is predictable), which allows the attacker to recover the PSK much faster
+- WPA version 3 (WPA3) addresses all the vulnerabilities to which WPA and WPA2 are susceptible, and many wireless professionals recommend WPA3 to organizations and individuals
+- WPA is not susceptible to the IV attacks that affect WEP; however, it is possible to capture the WPA four-way handshake between a client and a wireless infrastructure device and then brute-force the WPA PSK
+- Mathy Vanhoef and Frank Piessens, from the University of Leuven, found and disclosed a series of vulnerabilities that affect WPA and WPA2. These vulnerabilities – also referred to as KRACK (which stands for key reinstallation attack
+- Successful exploitation could allow unauthenticated attackers to reinstall a previously used encryption or integrity key
+-  Several vulnerabilities in WPA3 have been discovered in recent years. The WPA3 protocol introduced a new handshake called the “dragonfly handshake” that uses Extensible Authentication Protocol (EAP) for authentication
+-  Several vulnerabilities can allow an attacker to perform different side-channel attacks, downgrade attacks, and DoS conditions
+-  FragAttacks (which stands for fragmentation and aggregation attacks) is another type of vulnerability that can allow an attacker to exploit WPA3
+-  Wi-Fi Protected Setup (WPS) is a protocol that simplifies the deployment of wireless networks. It is implemented so that users can simply generate a WPA PSK with little interaction with a wireless device
+
+### KARMA Attacks
+- KARMA (which stands for karma attacks radio machines automatically) is an on-path attack that involves creating a rogue AP and allowing an attacker to intercept wireless traffic
+- In a KARMA attack scenario, the attacker listens for the probe requests from wireless devices and intercepts them to generate the same SSID for which the device is sending probes
+
+### Fragmentation Attacks
+- Wireless fragmentation attacks can be used to acquire 1500 bytes of pseudo-random generation algorithm (PRGA) elements. Wireless fragmentation attacks can be launched against WEP-configured devices
+- These attacks do not recover the WEP key itself but can use the PRGA to generate packets with tools such as Packetforge-ng (which is part of the Aircrack-ng suite of tools) to perform wireless injection attacks
+
+### Credential Harvesting
+- Credential harvesting attacks can be launched using common social engineering attacks such as phishing attacks, and they can be performed by impersonating a wireless AP or a captive portal to convince a user to enter his or her credentials
+
+### Bluejacking and Bluesnarfing
+- Bluejacking is an attack that can be performed using Bluetooth with vulnerable devices in range. An attacker sends unsolicited messages to a victim over Bluetooth, including a contact card (vCard) that typically contains a message in the name field.
+- This is done using the Object Exchange (OBEX) protocol. A vCard can contain name, address, telephone numbers, email addresses, and related web URLs
+- Bluesnarfing attacks are performed to obtain unauthorized access to information from a Bluetooth-enabled device. An attacker can launch Bluesnarfing attacks to access calendars, contact lists, emails and text messages, pictures, or videos from the victim
+- Bluejacking attacks only transmit data to the victim device, Bluesnarfing attacks actually steal information from the victim device
+- Bluesnarfing attacks can also be used to obtain the International Mobile Equipment Identity (IMEI) number for a device
+- Password spraying is a type of credential attack in which an attacker brute-forces logins (that is, attempts to authenticate numerous times) based on a list of usernames with default passwords of common systems or application
+
+---
 
 ## Tools Introduced
 
@@ -148,6 +212,9 @@ Amplification- An amplification attack is a form of reflected DoS attack in whic
 - smtp-user-enum tool
 - Mimikatz
 - Empire is a popular tool that can be used to perform golden ticket
+- aircrack-ng
+- bluesnarfer
+  
 ---
 
 ## References
@@ -157,5 +224,13 @@ Amplification- An amplification attack is a form of reflected DoS attack in whic
 - https://www.offensive-security.com/metasploit-unleashed/mimikatz/
 - https://www.kerberos.org/
 - https://github.com/BC-SECURITY/Empire
+- https://www.aircrack-ng.org/
 - https://github.com/moxie0/sslstrip
 - https://www.cisa.gov/news-events/alerts/2014/10/17/ssl-30-protocol-vulnerability-and-poodle-attack
+- https://wigle.net/
+- https://www.krackattacks.com/
+- https://wpa3.mathyvanhoef.com/
+- https://www.fragattacks.com/
+- https://github.com/t6x/reaver-wps-fork-t6x
+- http://download.aircrack-ng.org/wiki-files/doc/Fragmentation-Attack-in-Practice.pdf
+- http://acadpubl.eu/jsi/2017-116-8/articles/9/72.pdf
