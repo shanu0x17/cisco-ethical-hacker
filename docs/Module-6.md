@@ -54,7 +54,35 @@ Messages in the 500 range are related to server errors.
 Authentication bypass: The most basic LDAP injection attacks are launched to bypass password and credential checking.
 Information disclosure: An attacker could inject crafted LDAP packets to list all resources in an organization’s directory and perform reconnaissance.
 
+### Authentication-Based Vulnerabilities
 
+- Session Hijacking
+   - Once an authenticated session has been established, the session ID (or token) is temporarily equivalent to the strongest authentication method used by the application.
+   - It is possible to easily fingerprint these development frameworks and languages by using the following session ID names:
+PHP: PHPSESSID
+J2EE: JSESSIONID
+ColdFusion: CFID and CFTOKEN
+ASP.NET: ASP.NET_SessionId
+   
+   - Sometimes developers set it to just a few bits, but the session ID must be at least 128 bits (16 bytes). Also, the session ID must be unique and unpredictable
+   - It’s a good idea to use a cryptographically secure pseudorandom number generator (PRNG) because the session ID value must provide at least 256 bits of entropy
+   - Configuring a cookie with the HTTPOnly flag forces the web browser to have this cookie processed only by the server, and any attempt to access the cookie from client-based code or scripts is strictly forbidden
+   - It is important to use non-persistent cookies so the session ID does not remain in the web client cache for long periods of time
+   - There are several ways an attacker can perform session hijacking and several ways a session token may be compromised:
+ - Predicting session tokens: This is why it is important to use non-predictable tokens, as previously discussed in this section.
+- Session sniffing: This can occur through collecting packets of unencrypted web sessions.
+- On-path attack (formerly known as man-in-the-middle attack): With this type of attack, the attacker sits in the path between the client and the web server. In addition, a browser (or an extension or a plugin) can be compromised and used to intercept and manipulate web sessions between the user and the web server. This browser-based attack was previously known as a man-in-the-browser attack
+
+- Redirect Attacks
+   -  The attacker can exploit such vulnerabilities when a web server accepts untrusted input that could cause the web application to redirect the request to a URL contained within untrusted input
+   - The attacker can modify the untrusted URL input and redirect the user to a malicious site to either install malware or steal sensitive information
+ 
+- Default Credentials
+   - Attackers can easily identify and access systems that use shared default passwords
+   - Passwords can be found in product documentation and compiled lists available on the Internet. An example is http://www.defaultpassword.com, but there are dozens of other sites that contain default passwords and configurations on the Internet
+
+- Kerberos Vulnerabilities
+   - Kerberos implementations is the use of unconstrained Kerberos delegation, a feature that allows an application to reuse the end-user credentials to access resources hosted on a different server
 
 
 
@@ -88,3 +116,6 @@ Information disclosure: An attacker could inject crafted LDAP packets to list al
 - https://www.owasp.org/index.php/Authentication_Cheat_Sheet
 - https://owasp.org/www-project-top-ten/
 - https://www.owasp.org/index.php/Command_Injection
+- https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+- http://www.defaultpassword.com/
+- https://www.shodan.io/
