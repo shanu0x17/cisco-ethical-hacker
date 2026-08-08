@@ -56,7 +56,7 @@ Information disclosure: An attacker could inject crafted LDAP packets to list al
 
 ### Authentication-Based Vulnerabilities
 
-- Session Hijacking
+- Session Hijacking:
    - Once an authenticated session has been established, the session ID (or token) is temporarily equivalent to the strongest authentication method used by the application.
    - It is possible to easily fingerprint these development frameworks and languages by using the following session ID names:
 PHP: PHPSESSID
@@ -73,18 +73,30 @@ ASP.NET: ASP.NET_SessionId
 - Session sniffing: This can occur through collecting packets of unencrypted web sessions.
 - On-path attack (formerly known as man-in-the-middle attack): With this type of attack, the attacker sits in the path between the client and the web server. In addition, a browser (or an extension or a plugin) can be compromised and used to intercept and manipulate web sessions between the user and the web server. This browser-based attack was previously known as a man-in-the-browser attack
 
-- Redirect Attacks
+- Redirect Attacks:
    -  The attacker can exploit such vulnerabilities when a web server accepts untrusted input that could cause the web application to redirect the request to a URL contained within untrusted input
    - The attacker can modify the untrusted URL input and redirect the user to a malicious site to either install malware or steal sensitive information
  
-- Default Credentials
+- Default Credentials:
    - Attackers can easily identify and access systems that use shared default passwords
    - Passwords can be found in product documentation and compiled lists available on the Internet. An example is http://www.defaultpassword.com, but there are dozens of other sites that contain default passwords and configurations on the Internet
 
-- Kerberos Vulnerabilities
+- Kerberos Vulnerabilities:
    - Kerberos implementations is the use of unconstrained Kerberos delegation, a feature that allows an application to reuse the end-user credentials to access resources hosted on a different server
 
+### Authorization Based Vulnerabilities
 
+- Parameter Pollution:
+  - HTTP parameter pollution (HPP) vulnerabilities can be introduced if multiple HTTP parameters have the same name. This issue may cause an application to interpret values incorrectly
+  - Example : URL contains the query string ?search=battery&results=30&search=knives
+
+- Insecure Direct Object Reference Vulnerabilities
+   - Insecure Direct Object Reference vulnerabilities can be exploited when web applications allow direct access to objects based on user input
+   -  In order to exploit this type of vulnerability, an attacker needs to map out all locations in the application where user input is used to reference objects directly
+   - In the following example, the value of a parameter is used directly to execute an operation in the system:
+     https://store.h4cker.org/changepassd?user=omar
+     In this example, the value of the user parameter (omar) is used to have      the system change the user’s password
+   - 
 
 
 
@@ -119,3 +131,4 @@ ASP.NET: ASP.NET_SessionId
 - https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
 - http://www.defaultpassword.com/
 - https://www.shodan.io/
+- https://github.com/zaproxy/zaproxy
