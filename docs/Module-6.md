@@ -96,8 +96,39 @@ ASP.NET: ASP.NET_SessionId
    - In the following example, the value of a parameter is used directly to execute an operation in the system:
      https://store.h4cker.org/changepassd?user=omar
      In this example, the value of the user parameter (omar) is used to have      the system change the user’s password
-   - 
 
+### XSS Vulnerabilities
+
+- Cross-site scripting (XSS) is a type of injection attack in which web applications accept malicious scripts that are often appended to a URL or inserted into user-supplied text that is displayed to all visitors to a web page
+- You typically find XSS vulnerabilities in the following:
+
+Search fields that echo a search string back to the user
+HTTP headers
+Input fields that echo user data
+Error messages that return user-supplied text
+Hidden fields that may include user input data
+Applications (or websites) that display user-supplied data
+
+- Reflected XSS Attacks:
+   - Reflected XSS attacks (that is, non-persistent XSS attacks) occur when malicious code or scripts are injected by a vulnerable web application using any method that yields a response as part of a valid HTTP request
+   - Examples of methods of delivery for XSS exploits are phishing emails, messaging applications, and search engines
+   - The following steps are illustrated in Figure 6-18:
+
+          Step 1. The attacker finds a vulnerability in the web server.
+
+          Step 2. The attacker sends a malicious link to the victim.
+
+          Step 3. The victim clicks on the malicious link, and the attack is sent to the vulnerable server.
+
+          Step 4. The attack is reflected to the victim and is executed.
+
+          Step 5. The victim sends information (depending on the attack) to the attacker
+   - Stored XSS Attacks:
+      - Stored, or persistent, XSS attacks occur when malicious code or script is permanently stored on a vulnerable or malicious server, using a database. These attacks are typically carried out on websites hosting blog posts (comment forms), web forums, and other permanent storage methods
+      - An example of a stored XSS attack is a user requesting the stored information from the vulnerable or malicious server, which causes the injection of the requested malicious script into the victim’s browser
+      - In a real attack, an attacker might present users with text persuading them to perform a specific action, such as “your password has expired” or “please log in again.” The goal of the attacker would be to redirect the user to another site to steal his or her credentials when the user tries to change the password or once again log in to the fake application.
+      - DOM-based attacks are typically reflected XSS attacks that are triggered by sending a link with inputs that are reflected to the web browser. In DOM-based XSS attacks, the payload is never sent to the server. Instead, the payload is only processed by the web client (browser)
+      - 
 
 
 
@@ -132,3 +163,4 @@ ASP.NET: ASP.NET_SessionId
 - http://www.defaultpassword.com/
 - https://www.shodan.io/
 - https://github.com/zaproxy/zaproxy
+- https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
