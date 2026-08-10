@@ -128,11 +128,20 @@ Applications (or websites) that display user-supplied data
       - An example of a stored XSS attack is a user requesting the stored information from the vulnerable or malicious server, which causes the injection of the requested malicious script into the victim’s browser
       - In a real attack, an attacker might present users with text persuading them to perform a specific action, such as “your password has expired” or “please log in again.” The goal of the attacker would be to redirect the user to another site to steal his or her credentials when the user tries to change the password or once again log in to the fake application.
       - DOM-based attacks are typically reflected XSS attacks that are triggered by sending a link with inputs that are reflected to the web browser. In DOM-based XSS attacks, the payload is never sent to the server. Instead, the payload is only processed by the web client (browser)
-      - 
 
+### Clickjacking:
+  Clickjacking involves using multiple transparent or opaque layers to induce a user into clicking on a web button or link on a page that he or she was not intended to navigate or click. Clickjacking attacks are often referred to as UI redress attacks
 
+### Exploiting Directory Traversal Vulnerabilities
+   A directory traversal vulnerability (often referred to as path traversal ) can allow attackers to access files and directories that are stored outside the web root folder.
+   ex: http://198.51.100.24:8080/contents/file/?page=../../../../../etc/passwd
 
-
+- Cookie manipulation is possible when vulnerable applications store user input and then embed that input in a response within a part of the DOM
+- An attacker can use a JavaScript string (or other scripts) to trigger the DOM-based vulnerability. Such scripts can write controllable data into the value of a cookie
+- A best practice for avoiding cookie manipulation attacks is to avoid dynamically writing to cookies using data originating from untrusted sources
+- A local file inclusion (LFI) vulnerability occurs when a web application allows a user to submit input into files or upload files to the server. Successful exploitation could allow an attacker to read and (in some cases) execute files on the victim’s system
+- When an attacker exploits an RFI vulnerability, instead of accessing a file on the victim, the attacker is able to execute code hosted on his or her own system (the attacking system)
+- 
 
 
 
