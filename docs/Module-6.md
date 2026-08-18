@@ -141,21 +141,26 @@ Applications (or websites) that display user-supplied data
 - A best practice for avoiding cookie manipulation attacks is to avoid dynamically writing to cookies using data originating from untrusted sources
 - A local file inclusion (LFI) vulnerability occurs when a web application allows a user to submit input into files or upload files to the server. Successful exploitation could allow an attacker to read and (in some cases) execute files on the victim’s system
 - When an attacker exploits an RFI vulnerability, instead of accessing a file on the victim, the attacker is able to execute code hosted on his or her own system (the attacking system)
-- 
 
-
-
-
-
-
-
+### Insecure Code Practices
+- Comments in Source Code
+-  Error messages such as error codes, database dumps, and stack traces can provide valuable information to an attacker, such as information about potential flaws in the applications that could be further exploited
+- Hard-coded credentials are catastrophic flaws that an attacker can leverage to completely compromise an application or the underlying system
+- A race condition occurs when a system or an application attempts to perform two or more operations at the same time. However, due to the nature of such a system or application, the operations must be done in the proper sequence in order to be done correctly
+- A large number of modern applications use APIs to allow other systems to interact with the application. Unfortunately, many APIs lack adequate controls and are difficult to monitor
+- When testing APIs, you should always analyze the collected requests to optimize fuzzing. After you find potential parameters to fuzz, determine the valid and invalid values that you want to send to the application
+- Web application parameter tampering attacks can be executed by manipulating parameters exchanged between the web client and the web server in order to modify application data
+- It might be possible to tamper with the values stored by a web application in hidden form fields
+- Code signing (or image signing) involves adding a digital signature to software and applications to verify that the application, operating system, or any software has not been modified since it was signed
+- Code signing is similar to the process used for SSL/TLS certificates. A key pair (one public key and one private key) identifies and authenticates the software engineer (developer) and his or her code
+  
 ---
 
 ## Tools Introduced
 
 - curl
 - Nikto - website scanner
-- 
+- Owasp ZAP
   
 ---
 
@@ -167,9 +172,16 @@ Applications (or websites) that display user-supplied data
 - https://curl.haxx.se/docs/http2.html
 - https://www.owasp.org/index.php/Authentication_Cheat_Sheet
 - https://owasp.org/www-project-top-ten/
+- https://owasp.org/www-community/Improper_Error_Handling
 - https://www.owasp.org/index.php/Command_Injection
+- https://cwe.mitre.org/data/definitions/798.html
 - https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+- https://www.openapis.org/
 - http://www.defaultpassword.com/
 - https://www.shodan.io/
+- https://graphql.org/code
+- https://www.owasp.org/index.php/Fuzzing
+- https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
+- https://www.zaproxy.org/
 - https://github.com/zaproxy/zaproxy
 - https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
