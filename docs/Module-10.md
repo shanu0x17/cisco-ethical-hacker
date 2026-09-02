@@ -29,10 +29,14 @@
 - A shell is a command-line tool that allows for interactive or non-interactive command execution
 - Ruby is another programming language that is used in many web and other types of applications
 - The first line in the Bash script is a special kind of comment line that indicates the location of the interpreter to be used to run the code. This line is called a "shebang" and is common to most Linux scripts
-- 
----
 
-## Tools Introduced
+### Tools
+
+- ​​​​​​​Tools for Reconnaissance: nslookup, Host, Dig, whois, Exif, theHarvester, Shodan, Maltego, Recon-ng, censys, enum4linux
+- Fingerprinting Organization with Collected Archives (FOCA) is a tool designed to find metadata and hidden information in documents. FOCA can analyze websites as well as Microsoft Office, Open Office, PDF, and other documents
+- Tools for vulnerability scanning: OpenVAS, Nessus, Nexpose, Qualys, SQLmap, Nikto, OWASP ZedAttack Proxy (ZAP), w3af, DirBuster, Brakeman, Open Security Content Automation Protocol (SCAP) scanners, Wapiti, Scout Suite, WPScan (Wordpress scanner)
+- 
+
 
 
 ---
@@ -47,3 +51,5 @@
 - https://devhints.io/bash
 - https://www.perltutorial.org/
 - https://www.ruby-lang.org/en/documentation/quickstart/
+- https://github.com/ElevenPaths/FOCA
+- https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
