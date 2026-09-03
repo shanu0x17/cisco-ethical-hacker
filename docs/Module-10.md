@@ -52,6 +52,10 @@
 - Proxychains can be used for evasion, as it is a tool that forces any TCP connection made by a specified application to use Tor or any other SOCKS4, SOCKS5, HTTP, or HTTPS proxy
 - Tools for DNS tunneling; DeNise, dns2tcp, DNScapy, DNScat, DNScat2, Heyoka, iodine, sods, psudp, Feederbot 
 - Exploitation frameworsks: Metasploit, BeEF
+- BeEF is an exploitation framework for web application testing. BeEF exploits browser vulnerabilities and interacts with one or more web browsers to launch directed command modules
+- BeEF allows you to launch a set of unique attack vectors and select specific modules in real time to target each browser and context
+- Common Decompilation, Disassembly, and Debugging Tools: The GNU Project Debugger (GDB), Windows Debugger, OllyDbg, edb Debugger, Ghidra, Interactive Disassembler (IDA), Objdump
+- With a debugger like GDB, you can troubleshoot and find software bugs, understand what a program was doing at the moment it crashed, make a program stop on specified conditions, and modify elements of a program to experiment or to correct problems
 - 
 ---
 
@@ -66,9 +70,11 @@
 - https://www.perltutorial.org/
 - https://www.ruby-lang.org/en/documentation/quickstart/
 - https://github.com/ElevenPaths/FOCA
+- https://beefproject.com/
 - https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
 - https://www.openwall.com/wordlists
 - https://github.com/berzerk0/Probable-Wordlists
+- https://www.sourceware.org/gdb/
 - https://sectools.org/tool/cain/
 - https://github.com/haad/proxychains
 - https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter
