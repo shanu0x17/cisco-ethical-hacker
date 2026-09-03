@@ -35,10 +35,24 @@
 - ​​​​​​​Tools for Reconnaissance: nslookup, Host, Dig, whois, Exif, theHarvester, Shodan, Maltego, Recon-ng, censys, enum4linux
 - Fingerprinting Organization with Collected Archives (FOCA) is a tool designed to find metadata and hidden information in documents. FOCA can analyze websites as well as Microsoft Office, Open Office, PDF, and other documents
 - Tools for vulnerability scanning: OpenVAS, Nessus, Nexpose, Qualys, SQLmap, Nikto, OWASP ZedAttack Proxy (ZAP), w3af, DirBuster, Brakeman, Open Security Content Automation Protocol (SCAP) scanners, Wapiti, Scout Suite, WPScan (Wordpress scanner)
+- Common tools for credential attacks: John the Ripper, Cain and Abel, Hashcat, Hydra, RainbowCrack, Medusa and Ncrack, CeWL, Mimikatz, Patator
+- There is a GUI version of John the Ripper called Johnny
+- Cain (or Cain and Abel) is a tool that can be used to “recover” passwords of Windows-based systems. Cain and Abel can be used to decipher and recover user credentials by performing packet captures (sniffing); cracking encrypted passwords by using dictionary, brute-force, and cryptanalysis attacks; and using many other techniques
+- Attackers can use rainbow tables – precomputed tables for reversing cryptographic hash functions – to accelerate password cracking. It is possible to use a rainbow table to derive a password by looking at the hashed value
+- Medusa a tool used to perform brute-force credential attacks against various
+- Mimikatz is a post exploittation tool that can retrive passwords from the memory of a compromised host
+- Patator has several stratrgies for enumerating SMTP usernames and can then be used to brute force the passwords that are associated with those users
+- Common protocols for Persistence: Microsoft’s Remote Desktop Protocol (RDP), Apple Remote Desktop, VNC, X server forwarding 
+- PowerSploit is a collection of PowerShell modules that can be used for post- exploitation and other phases of an assessment
+- Empire is a PowerShell-based post-exploitation framework that is very popular among pen testers
+- Evasion techniques are methods used by attackers to bypass security defenses like firewalls, intrusion detection systems (IDS), and antivirus software to deliver malware or maintain access without detection
+- Several tools and techniques can be used for evasion, including the following: Veil, Tor, Proxychains, Encryption, Encapsulation and tunneling using DNS and protocols such as NTP
+- Veil is a framework that can be used with Metasploit to evade antivirus checks and other security controls
+- Tor is a free tool that enables its users to surf the Web anonymously. Tor works by “routing” IP traffic through a free worldwide network consisting of thousands of Tor relays
+- Proxychains can be used for evasion, as it is a tool that forces any TCP connection made by a specified application to use Tor or any other SOCKS4, SOCKS5, HTTP, or HTTPS proxy
+- Tools for DNS tunneling; DeNise, dns2tcp, DNScapy, DNScat, DNScat2, Heyoka, iodine, sods, psudp, Feederbot 
+- Exploitation frameworsks: Metasploit, BeEF
 - 
-
-
-
 ---
 
 ## References
@@ -53,3 +67,8 @@
 - https://www.ruby-lang.org/en/documentation/quickstart/
 - https://github.com/ElevenPaths/FOCA
 - https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+- https://www.openwall.com/wordlists
+- https://github.com/berzerk0/Probable-Wordlists
+- https://sectools.org/tool/cain/
+- https://github.com/haad/proxychains
+- https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter
