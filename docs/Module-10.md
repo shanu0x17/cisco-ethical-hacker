@@ -56,7 +56,48 @@
 - BeEF allows you to launch a set of unique attack vectors and select specific modules in real time to target each browser and context
 - Common Decompilation, Disassembly, and Debugging Tools: The GNU Project Debugger (GDB), Windows Debugger, OllyDbg, edb Debugger, Ghidra, Interactive Disassembler (IDA), Objdump
 - With a debugger like GDB, you can troubleshoot and find software bugs, understand what a program was doing at the moment it crashed, make a program stop on specified conditions, and modify elements of a program to experiment or to correct problems
-- 
+- You can use the Windows Debugger (WinDbg) to debug kernel and user mode code. You can also use it to analyze crash dumps and to analyze the CPU registers as code executes
+- OllyDbg is a debugger created to analyze Windows 32-bit applications. It is included in Kali Linux and other penetration testing distributions; it can also be downloaded from
+- The edb debugger (often called Evan’s debugger) is a cross-platform debugger that supports AArch32, x86, and x86-64 architectures
+- Ghidra is a powerful and free tool popular among security researchers for reverse engineering and binary analysis. Ghidra provides comprehensive capabilities for dissecting and understanding complex software, including malware analysis and vulnerability research
+- Interactive Disassembler (IDA) is one of the most popular disassemblers, debuggers, and decompilers on the market. IDA is a commercial product of Hex-Rays, and it can be purchased from
+### Common Tools for Forensics:
+- ADIA (Appliance for Digital Investigation and Analysis): ADIA is a VMware-based appliance used for digital investigation and acquisition that is built entirely from public domain software https://forensics.cert.org/#ADIA
+- CAINE: The Computer Aided Investigative Environment (CAINE) contains numerous tools that help investigators with analyses, including forensic evidence collection http://www.caine-live.net/index.html
+- Skadi: This all-in-one solution to parsing collected data makes the data easily searchable with built-in common searches and enables searching of single and multiple hosts simultaneously
+- PALADIN: PALADIN is a modified Linux distribution for performing various evidence collection tasks in a forensically sound manner. It includes many open source forensics tools
+- Security Onion: Security Onion, a Linux distro aimed at network security monitoring, features advanced analysis tools, some of which can help in forensic investigations
+- SIFT Workstation: The SANS Investigative Forensic Toolkit (SIFT) Workstation demonstrates that advanced incident response capabilities and deep-dive digital forensic techniques to intrusions can be accomplished using cutting-edge open source tools that are freely available and frequently updated
+### Common Tools for Software Assurance:
+- SpotBugs (previously known as Findbugs) is a static analysis tool designed to find bugs in applications created in the Java programming language
+- SonarQube is a tool that can be used to find vulnerabilities in code, and it provides support for continuous integration and DevOps environments
+- Fuzz testing, or fuzzing , is a technique that can be used to find software errors (or bugs) and security vulnerabilities in applications, operating systems, infrastructure devices, IoT devices, and other computing device
+-  Fuzzing involves sending random data to the unit being tested in order to find input validation issues, program failures, buffer overflows, and other flaws. Peach is one of the most popular fuzzers in the industry
+- American Fuzzy Lop (AFL) is a tool that provides features of compile-time instrumentation and genetic algorithms to automatically improve the functional coverage of fuzzing test cases
+
+### Wireless Tools
+- Wifite2: This is a Python program to test wireless networks that can be downloaded from https://github.com/derv82/wifite2.
+- Rogue access points: You can easily create rogue access points by using open-source tools such as hostapd. 
+- EAPHammer: This tool, which you can use to perform evil twin attacks, can be downloaded from https://github.com/s0lst1c3/eaphammer.
+- mdk4: This tool is used to perform fuzzing, IDS evasions, and other wireless attacks. mdk4 can be downloaded from https://github.com/aircrack-ng/mdk4.
+- Spooftooph: This tool is used to spoof and clone Bluetooth devices. It can be downloaded from https://gitlab.com/kalilinux/packages/spooftooph.
+- Reaver: This tool is used to perform brute-force attacks against Wi-Fi Protected Setup (WPS) implementations. Reaver can be downloaded from https://gitlab.com/kalilinux/packages/reaver.
+- Wireless Geographic Logging Engine (WiGLE): You can learn about this war driving tool at https://wigle.net.
+- Fern Wi-Fi Cracker: This tool is used to perform different attacks against wireless networks, including cracking WEP, WPA, and WPS keys. You can download Fern Wi-Fi Cracker from https://gitlab.com/kalilinux/packages/fern-wifi-cracker.
+
+### Steganography Tools
+- OpenStego: You can download this steganography tool from https://www.openstego.com.
+- snow: This is a text-based steganography tool that can be downloaded from https://github.com/mattkwan-zz/snow.
+- Coagula: This program, which can be used to make sound from an image, can be downloaded from https://www.abc.se/~re/Coagula/Coagula.html.
+- Sonic Visualiser: This tool can be used to analyze embedded information in music or audio recordings. It can be downloaded from https://www.sonicvisualiser.org.
+- TinEye: This is a reverse image search website at https://tineye.com.
+- metagoofil: This tool can be used to extract metadata information from documents and images. You can download metagoofil from https://github.com/laramies/metagoofil.
+
+### Cloud Tools
+- ScoutSuite: This collection of tools can be used to reveal vulnerabilities in AWS, Azure, Google Cloud Platform, and other cloud platforms. You can download ScoutSuite from https://github.com/nccgroup/ScoutSuite.
+- CloudBrute: You can download this cloud enumeration tool from https://github.com/0xsha/CloudBrute.
+- Pacu: This is a framework for AWS exploitation that can be downloaded from https://github.com/RhinoSecurityLabs/pacu.
+- Cloud Custodian: This cloud security, governance, and management tool can be downloaded from https://cloudcustodian.io.
 ---
 
 ## References
@@ -78,3 +119,5 @@
 - https://sectools.org/tool/cain/
 - https://github.com/haad/proxychains
 - https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter
+- https://www.ollydbg.de/
+- https://digital-forensics.sans.org/community/downloads
